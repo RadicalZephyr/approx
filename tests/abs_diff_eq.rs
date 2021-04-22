@@ -457,6 +457,7 @@ mod test_vec {
     }
 }
 
+#[cfg(feature = "array_impl")]
 mod test_array {
     mod test_f32 {
         #[test]

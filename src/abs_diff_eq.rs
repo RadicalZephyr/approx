@@ -219,6 +219,7 @@ impl<A, B> AbsDiffEq<Vec<B>> for Vec<A>
     }
 }
 
+#[cfg(feature = "array_impl")]
 impl<A, B, const N: usize> AbsDiffEq<[B; N]> for [A; N]
 where
     A: AbsDiffEq<B>,

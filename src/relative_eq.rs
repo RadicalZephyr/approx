@@ -231,6 +231,7 @@ impl<A, B> RelativeEq<Vec<B>> for Vec<A>
     }
 }
 
+#[cfg(feature = "array_impl")]
 impl<A, B, const N: usize> RelativeEq<[B; N]> for [A; N]
 where
     A: RelativeEq<B>,

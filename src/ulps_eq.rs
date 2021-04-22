@@ -188,6 +188,7 @@ impl<A, B> UlpsEq<Vec<B>> for Vec<A>
     }
 }
 
+#[cfg(feature = "array_impl")]
 impl<A, B, const N: usize> UlpsEq<[B; N]> for [A; N]
 where
     A: UlpsEq<B>,
